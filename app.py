@@ -39,6 +39,7 @@ def translate_words(sentences, dest_language):
     for sentence in sentences:
         translated_sentence = translator.translate(sentence, dest=dest_language).text
         translated_sentences.append(translated_sentence)
+    print(translated_sentences)
     return translated_sentences
 
 @app.route('/translate', methods=['POST'])
